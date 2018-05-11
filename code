@@ -22,8 +22,8 @@ var singleNumber = function(nums) {
  * @return {number}
  */
 var singleNumber = function(nums) {
-    if(nums == []) return '';
-    if(nums.length<2) return nums[0];
+    if(nums == []) return 0;
+    if(nums.length == 1) return nums[0];
     nums = nums.sort();
     var result = nums[0];
     for(var i=1;i<nums.length;i++){
@@ -34,5 +34,5 @@ var singleNumber = function(nums) {
     }          
     if(i != nums.length) return result;
     else if(result != nums[nums.length-2]) return result;
-    else return '';
+    else return 0;
 };
